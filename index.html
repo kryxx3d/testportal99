@@ -139,8 +139,9 @@
           <p class="font-bold text-white text-xs" id="step2-teacher-name">Ibu Siti Rahmawati, S.Pd</p>
           <p class="text-slate-400 text-[10px]">Guru Pengampu Aktif</p>
         </div>
-        <button onclick="goToLogin()" class="text-slate-400 hover:text-rose-400 px-2.5 sm:px-3 py-1.5 rounded-lg border border-slate-700 hover:border-rose-800 transition-colors text-xs">
-          Keluar
+        <button onclick="goBack()" class="text-slate-300 hover:text-white px-2.5 sm:px-3 py-1.5 rounded-lg border border-slate-700 hover:border-slate-500 transition-colors text-xs flex items-center gap-1.5 active:scale-95">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+          <span>Kembali</span>
         </button>
       </div>
     </div>
@@ -259,10 +260,13 @@
           <p class="text-[11px] text-slate-400 mt-2">Pilih salah satu rombel (A, B, C, D, E, F, G, H, atau I) untuk membuka lembar kerja.</p>
         </div>
 
-        <!-- Tombol Konfirmasi -->
+        <!-- Tombol Konfirmasi & Kembali -->
         <div class="pt-4 sm:pt-5 border-t border-slate-100 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
-          <span class="text-[11px] sm:text-xs text-slate-500 text-center sm:text-left">Konteks akan otomatis dikunci di dashboard.</span>
-          <button onclick="confirmWorkspaceAndProceed()" class="w-full sm:w-auto px-6 py-3 bg-indigo-950 hover:bg-indigo-900 text-white font-bold rounded-xl text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2 active:scale-95">
+          <button type="button" onclick="goBack()" class="order-2 sm:order-1 px-4 py-2.5 text-slate-600 hover:text-indigo-950 font-semibold rounded-xl text-xs sm:text-sm border border-slate-200 hover:bg-slate-50 transition-all flex items-center justify-center gap-1.5 active:scale-95">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+            <span>Kembali ke Login</span>
+          </button>
+          <button onclick="confirmWorkspaceAndProceed()" class="order-1 sm:order-2 w-full sm:w-auto px-6 py-3 bg-indigo-950 hover:bg-indigo-900 text-white font-bold rounded-xl text-xs sm:text-sm shadow-md transition-all flex items-center justify-center gap-2 active:scale-95">
             <span>Buka Dashboard Kelas</span>
             <svg class="w-4 h-4 text-amber-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
           </button>
@@ -325,9 +329,9 @@
 
               <span class="text-indigo-300 font-normal">Semester Ganjil</span>
 
-              <button onclick="goToSelectClass()" class="ml-2 bg-amber-500 hover:bg-amber-400 text-indigo-950 font-semibold px-2.5 py-1 rounded-lg transition-all flex items-center gap-1 shadow-sm active:scale-95">
-                <span>Ganti Mapel / Kelas</span>
-                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              <button onclick="goBack()" title="Kembali ke Pemilihan Mapel & Kelas" class="ml-2 bg-amber-500 hover:bg-amber-400 text-indigo-950 font-bold px-2.5 py-1 rounded-lg transition-all flex items-center gap-1.5 shadow-sm active:scale-95">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                <span>Kembali / Ganti Mapel</span>
               </button>
             </div>
           </div>
@@ -358,9 +362,9 @@
           <span class="text-indigo-400">·</span>
           <span class="font-medium text-white truncate" id="mob-active-class-text">Kelas VIII A</span>
         </div>
-        <button onclick="goToSelectClass()" class="bg-amber-400 hover:bg-amber-300 text-indigo-950 font-bold px-2 py-0.5 rounded-lg text-[11px] flex-shrink-0 ml-2 active:scale-95 transition-all flex items-center gap-1">
-          <span>Ganti</span>
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        <button onclick="goBack()" title="Kembali ke Pilih Kelas / Mapel" class="bg-amber-400 hover:bg-amber-300 text-indigo-950 font-bold px-2.5 py-1 rounded-lg text-[11px] flex-shrink-0 ml-2 active:scale-95 transition-all flex items-center gap-1 shadow-xs">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+          <span>Kembali</span>
         </button>
       </div>
 
@@ -421,7 +425,10 @@
             </div>
             <div class="mt-2.5 pt-2 border-t border-indigo-100/80 flex items-center justify-between">
               <span class="text-[10px] text-slate-500 font-medium">Ruang: <strong class="text-indigo-950" id="mob-drawer-class-label">Kelas VIII A</strong></span>
-              <button onclick="goToSelectClass(); toggleMobileDrawer(false);" class="text-[10px] bg-amber-400 text-indigo-950 font-bold px-2 py-0.5 rounded-md hover:bg-amber-300 transition-all">Ganti Kelas</button>
+              <button onclick="goBack(); toggleMobileDrawer(false);" class="text-[10px] bg-amber-400 text-indigo-950 font-bold px-2 py-0.5 rounded-md hover:bg-amber-300 transition-all flex items-center gap-1 active:scale-95">
+                <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+                <span>Kembali</span>
+              </button>
             </div>
           </div>
 
@@ -493,7 +500,11 @@
           </div>
         </div>
 
-        <div class="p-4 border-t border-slate-100">
+        <div class="p-4 border-t border-slate-100 space-y-2">
+          <button onclick="goBack(); toggleMobileDrawer(false);" class="w-full py-2.5 px-3 text-xs text-indigo-900 bg-indigo-50 hover:bg-indigo-100 flex items-center justify-center gap-1.5 rounded-xl border border-indigo-200 transition-colors font-bold active:scale-95">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+            <span>Kembali ke Pilih Mapel / Kelas</span>
+          </button>
           <button onclick="goToLogin(); toggleMobileDrawer(false);" class="w-full py-2.5 px-3 text-xs text-rose-600 hover:bg-rose-50 flex items-center justify-center gap-1.5 rounded-xl border border-rose-200 transition-colors font-medium">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
             <span>Keluar dari Akun Guru</span>
@@ -580,7 +591,11 @@
             <p class="text-[11px] text-slate-500 mt-1.5 text-right font-medium" id="sidebar-pass-percent">6 Siswa Terdaftar</p>
           </div>
 
-          <div class="mt-4 pt-2">
+          <div class="mt-4 pt-2 space-y-2">
+            <button onclick="goBack()" class="w-full py-2 px-3 text-xs text-indigo-900 bg-indigo-50 hover:bg-indigo-100 flex items-center justify-center gap-1.5 rounded-lg border border-indigo-200 transition-colors font-bold active:scale-95">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/></svg>
+              <span>Kembali ke Pilih Mapel / Kelas</span>
+            </button>
             <button onclick="goToLogin()" class="w-full py-2 px-3 text-xs text-rose-600 hover:bg-rose-50 flex items-center justify-center gap-1.5 rounded-lg border border-rose-200 transition-colors font-medium">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/></svg>
               <span>Keluar dari Akun Guru</span>
@@ -1851,29 +1866,115 @@
       }
     }
 
-    // NAVIGASI ANTAR SCREEN
-    function showScreen(screenId) {
+    // NAVIGASI ANTAR SCREEN & RIWAYAT (BACKWARD COMPATIBILITY)
+    let currentScreenId = 'screen-login';
+
+    function closeAllModals() {
+      const modalIds = ['modal-add-column', 'modal-add-attendance-column', 'modal-jurnal'];
+      modalIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.classList.add('hidden');
+      });
+      document.body.style.overflow = '';
+    }
+
+    function showScreen(screenId, pushToHistory = true) {
+      closeAllModals();
+      toggleMobileDrawer(false);
+
       document.getElementById('screen-login').classList.add('hidden');
       document.getElementById('screen-select-class').classList.add('hidden');
       document.getElementById('screen-dashboard').classList.add('hidden');
 
-      document.getElementById(screenId).classList.remove('hidden');
+      const target = document.getElementById(screenId);
+      if (target) {
+        target.classList.remove('hidden');
+      }
+      currentScreenId = screenId;
       window.scrollTo(0, 0);
+
+      const hashName = screenId.replace('screen-', '');
+      if (pushToHistory) {
+        if (!history.state || history.state.screen !== screenId) {
+          history.pushState({ screen: screenId }, '', '#' + hashName);
+        }
+      }
     }
 
-    function goToLogin() {
-      showScreen('screen-login');
+    function goToLogin(pushToHistory = true) {
+      showScreen('screen-login', pushToHistory);
     }
 
-    function goToSelectClass() {
+    function goToSelectClass(pushToHistory = true) {
       renderRombelButtons();
-      showScreen('screen-select-class');
+      showScreen('screen-select-class', pushToHistory);
     }
 
     function handleLoginSubmit(e) {
       e.preventDefault();
-      goToSelectClass();
+      goToSelectClass(true);
     }
+
+    // FUNGSI BACKWARD MANUAL / TOMBOL KEMBALI
+    function goBack() {
+      // 1. Jika menu drawer HP sedang terbuka, tutup drawer dulu
+      const drawerOverlay = document.getElementById('mobile-drawer-overlay');
+      if (drawerOverlay && !drawerOverlay.classList.contains('hidden')) {
+        toggleMobileDrawer(false);
+        return;
+      }
+
+      // 2. Jika ada modal aktif yang terbuka, tutup modal tersebut
+      const modalIds = ['modal-add-column', 'modal-add-attendance-column', 'modal-jurnal'];
+      for (const mId of modalIds) {
+        const modal = document.getElementById(mId);
+        if (modal && !modal.classList.contains('hidden')) {
+          modal.classList.add('hidden');
+          document.body.style.overflow = '';
+          return;
+        }
+      }
+
+      // 3. Gunakan history browser backward jika ada riwayat sesi
+      if (window.history.length > 1 && window.history.state) {
+        window.history.back();
+      } else {
+        // Fallback navigasi hierarkis jika dibuka langsung tanpa riwayat
+        if (currentScreenId === 'screen-dashboard') {
+          goToSelectClass(true);
+        } else if (currentScreenId === 'screen-select-class') {
+          goToLogin(true);
+        }
+      }
+    }
+
+    // EVENT LISTENER POPSTATE: OTOMATIS BERPINDAH TAMPILAN SAAT BROWSER / HP BACKWARD DITEKAN
+    window.addEventListener('popstate', (e) => {
+      closeAllModals();
+      toggleMobileDrawer(false);
+
+      const state = e.state;
+      const hash = window.location.hash.replace('#', '');
+      let targetScreen = 'screen-login';
+
+      if (state && state.screen) {
+        targetScreen = state.screen;
+      } else if (hash === 'dashboard') {
+        targetScreen = 'screen-dashboard';
+      } else if (hash === 'select-class') {
+        targetScreen = 'screen-select-class';
+      } else {
+        targetScreen = 'screen-login';
+      }
+
+      if (targetScreen === 'screen-dashboard') {
+        showScreen('screen-dashboard', false);
+      } else if (targetScreen === 'screen-select-class') {
+        goToSelectClass(false);
+      } else {
+        goToLogin(false);
+      }
+    });
 
     // PEMILIHAN BERTINGKAT: KELAS 7/8/9 -> ROMBEL A SAMPAI I (9 KELAS)
     function selectGradeLevel(lvl) {
@@ -3022,6 +3123,19 @@
     window.addEventListener('DOMContentLoaded', () => {
       selectGradeLevel(8);
       renderJournalTable();
+
+      // Sinkronisasi status riwayat halaman saat pertama kali dimuat
+      const hash = window.location.hash.replace('#', '');
+      if (hash === 'select-class') {
+        goToSelectClass(false);
+        history.replaceState({ screen: 'screen-select-class' }, '', '#select-class');
+      } else if (hash === 'dashboard') {
+        showScreen('screen-dashboard', false);
+        history.replaceState({ screen: 'screen-dashboard' }, '', '#dashboard');
+      } else {
+        showScreen('screen-login', false);
+        history.replaceState({ screen: 'screen-login' }, '', '#login');
+      }
     });
   </script>
 </body>
